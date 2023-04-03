@@ -1,0 +1,11 @@
+.upnav{
+    
+    position: fixed;
+    background-color: rgb(11, 11, 11);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+
+}

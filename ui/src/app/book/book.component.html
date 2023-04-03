@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Text Center</title>
+        <style type="text/css">
+            body{
+                padding: 0;
+                margin: 0;
+                background: #1a1502;
+            }
+            h1{
+                font-size: 2em;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-family: 'Times New Roman';
+                position: absolute;
+                top: 26%;
+                left: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Books Component</h1>
+    </body>
+</html>
+<h2 *ngIf="books.length<1">No Data</h2>
+<div style= "padding-left: 50%;margin: 13%; float:right">
+    <button class="button" (click)="addBook()">Add Book
+    </button>
+  </div>
+<table align="center">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author Name</th>
+            <th>Isbn No</th>
+            <th>Publication Date</th>
+            <th>Publisher Name</th>
+            <th>Copies</th>
+            <th>Category</th>
+            <th>Genre</th>
+            <th>SubGenre</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="books.length > 0">
+        <tr *ngFor = "let book of books">
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.isbn}}</td>
+            <td>{{book.publicationDate}}</td>
+            <td>{{book.publisher}}</td>
+            <td>{{book.copies}}</td>
+            <td>{{book.category}}</td>
+            <td>{{book.genre}}</td>
+            <td>{{book.subgenre}}</td>
+            <td>
+                <button (click)="deleteBook(book.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

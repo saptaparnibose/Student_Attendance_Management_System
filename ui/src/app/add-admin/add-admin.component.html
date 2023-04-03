@@ -1,0 +1,24 @@
+<div style="padding-left: 120px;padding-top: 120px; padding-left: 15px;">
+    <h1>Add Admin</h1>
+    <form [formGroup]="adminForm" (ngSubmit)="saveAdmin()">
+        <div>
+            <label>Name </label>
+            <input type="text" formControlName="name" style="padding: 10px; margin: 10px">
+        </div>
+
+        <div>
+            <label>Username </label>
+            <input type="text" formControlName="username" style="padding: 10px; margin: 10px">
+        </div>
+
+        <div>
+            <label>Password </label>
+            <input type="text" formControlName="password" style="padding: 10px; margin: 10px">
+        </div>
+
+        <div *ngIf="adminForm.valid">
+            <input type="submit" value="Save Admin" class = "btn" style="padding: 10px; margin: 10px">
+        </div>
+    </form>
+</div>
+<h3> Form status: {{adminForm.valid}}</h3>

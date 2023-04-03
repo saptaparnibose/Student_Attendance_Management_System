@@ -1,0 +1,44 @@
+table {
+    overflow: auto;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: #04aaa5;
+    color: white;
+  }
+
+
+  .button {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    text-shadow: 1px 1px 1px #000;
+    width: 100%;
+    padding: 10px 5px;
+    box-sizing:content-box;
+    color:rgb(255, 252, 250);
+    background-color: rgb(20, 185, 56);
+    border: 0;
+    border-radius: 15px; box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  }
+  .button:hover {
+    background-color: rgb(9, 106, 23);
+    color: rgb(227, 239, 227);
+  }
+
+.title-green{
+color: rgb(21, 143, 21);
+}
+
+.title-red{
+color: rgb(167, 14, 14);
+}
