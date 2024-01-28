@@ -1,0 +1,13 @@
+<div style="padding-left: 120px;padding-top: 120px; padding-left: 15px;">
+    <h1>Add Teacher</h1>
+    <form [formGroup]="teacherForm" (ngSubmit)="saveTeacher()">
+        <div>
+            <label>Name </label>
+            <input type="text" formControlName="name" style="padding: 10px; margin: 10px">
+        </div>
+        <div *ngIf="teacherForm.valid">
+            <input type="submit" value="Save Teacher" class = "btn" style="padding: 10px; margin: 10px">
+        </div>
+    </form>
+</div>
+<h3> Form status: {{teacherForm.valid}}</h3>

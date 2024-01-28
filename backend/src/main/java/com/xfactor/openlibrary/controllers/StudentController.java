@@ -55,38 +55,9 @@ public class StudentController {
         }
         return null;
     }
-    @GetMapping("/findTotal")
-    public long findTotal(){
-        return studentRepository.count();
-    }
     @DeleteMapping("/deleteById/{id}")
     public void deleteById(@PathVariable Long id){
         studentRepository.deleteById(id);
-    }
-    @GetMapping("findByName/{name}")
-    public List<Student> findByName(@PathVariable String name) {
-        List<Student> stu = studentRepository.findByName(name);
-        return stu;
-    }
-    @GetMapping("findByDepartment/{department}")
-    public List<Student> findByDepartment(@PathVariable String department) {
-        List<Student> stu = studentRepository.findByDepartment(department);
-        return stu;
-    }
-    @GetMapping("findByRollNumber/{rollNumber}")
-    public List<Student> findByRollNumber(@PathVariable String rollNumber) {
-        List<Student> stu = studentRepository.findByRollNumber(rollNumber);
-        return stu;
-    }
-    @GetMapping("findByBirthDate/{birthDate}")
-    public List<Student> findByBirthDate(@PathVariable String birthDate) {
-        List<Student> stu = studentRepository.findByBirthDate(birthDate);
-        return stu;
-    }
-    @GetMapping("findByMobileNumber/{mobileNumber}")
-    public List<Student> findByMobileNumber(@PathVariable String mobileNumber) {
-        List<Student> stu = studentRepository.findByMobileNumber(mobileNumber);
-        return stu;
     }
 }
 

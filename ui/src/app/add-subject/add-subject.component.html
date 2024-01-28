@@ -1,0 +1,20 @@
+<div style="padding-left: 120px;padding-top: 120px; padding-left: 15px;">
+    <h1>Add Subject</h1>
+    <form [formGroup]="subjectForm" (ngSubmit)="saveSubject()">
+        <div>
+            <label>SubjectCode </label>
+            <input type="text" formControlName="subjectCode" style="padding: 10px; margin: 10px">
+        </div>
+
+        <div>
+            <label>SubjectName </label>
+            <input type="text" formControlName="subjectName" style="padding: 10px; margin: 10px">
+        </div>
+
+        <div *ngIf="subjectForm.valid">
+            <input type="submit" value="Save Subject" class = "btn" style="padding: 10px; margin: 10px">
+        </div>
+    </form>
+</div>
+<h3> Form status: {{subjectForm.valid}}</h3>
+

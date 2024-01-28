@@ -55,29 +55,11 @@ public class AdminController {
         }
         return null;
     }
-    @GetMapping("/findTotal")
-    public long findTotal(){
-        return adminRepository.count();
-    }
     @DeleteMapping("/deleteById/{id}")
     public void deleteById(@PathVariable Long id){
         adminRepository.deleteById(id);
     }
-    @GetMapping("findByName/{name}")
-    public List<Admin> findByName(@PathVariable String name) {
-        List<Admin> l = adminRepository.findByName(name);
-        return l;
-    }
-    @GetMapping("findByUsername/{username}")
-    public List<Admin> findByUsername(@PathVariable String username) {
-        List<Admin> l = adminRepository.findByUsername(username);
-        return l;
-    }
-    @GetMapping("findByPassword/{password}")
-    public List<Admin> findByPassword(@PathVariable String password) {
-        List<Admin> l = adminRepository.findByPassword(password);
-        return l;
-    }
+    
     
 }
 

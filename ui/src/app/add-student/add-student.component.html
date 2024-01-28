@@ -2,28 +2,28 @@
     <h1>Add Students</h1>
     <form [formGroup]="studentForm" (ngSubmit)="saveStudent()">
         <div>
-            <label>Name </label>
-            <input type="text" formControlName="name" style="padding: 10px; margin: 10px">
+            <label>RollNo </label>
+            <input type="text" formControlName="rollNo" style="padding: 10px; margin: 10px">
         </div>
 
         <div>
-            <label>Department </label>
-            <input type="text" formControlName="department" style="padding: 10px; margin: 10px">
+            <label>StudentName </label>
+            <input type="text" formControlName="studentName" style="padding: 10px; margin: 10px">
         </div>
 
         <div>
-            <label>Roll Number </label>
-            <input type="number" formControlName="rollNumber" style="padding: 10px; margin: 10px">
+            <label>Batch </label>
+            <input type="number" formControlName="batch" style="padding: 10px; margin: 10px">
         </div>
 
         <div>
-            <label>Birth Date </label>
-            <input type="date" formControlName="birthDate" style="padding: 10px; margin: 10px">
+            <label>Semester </label>
+            <input type="number" formControlName="semester" style="padding: 10px; margin: 10px">
         </div>
 
         <div>
-            <label>Mobile Number </label>
-            <input type="number" formControlName="mobileNumber" style="padding: 10px; margin: 10px">
+            <label>BranchId </label>
+            <input type="number" formControlName="branchId" style="padding: 10px; margin: 10px">
         </div>
 
         <div *ngIf="studentForm.valid">

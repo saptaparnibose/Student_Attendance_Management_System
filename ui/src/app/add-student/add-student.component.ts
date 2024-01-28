@@ -13,11 +13,11 @@ export class AddStudentComponent implements OnInit {
 
   constructor(private formbuilder: FormBuilder, private http: HttpClient, private router: Router) { 
     this.studentForm = this.formbuilder.group({
-      name: ['', Validators.required],
-      department: [''],
-      rollNumber: [, Validators.required],
-      birthDate: [''],
-      mobileNumber: []
+      rollNo: [],
+      studentName: [''],
+      batch: [],
+      semester: [],
+      branchId: [],
 
     })
   }
