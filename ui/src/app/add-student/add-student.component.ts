@@ -13,12 +13,11 @@ export class AddStudentComponent implements OnInit {
 
   constructor(private formbuilder: FormBuilder, private http: HttpClient, private router: Router) { 
     this.studentForm = this.formbuilder.group({
-      rollNo: [],
-      studentName: [''],
+      rollNumber: [],
+      name: [''],
       batch: [],
       semester: [],
-      branchId: [],
-
+      branchId: []
     })
   }
 
@@ -26,7 +25,7 @@ export class AddStudentComponent implements OnInit {
   }
 
   saveStudent(){
-    let studentData = this.studentForm.value;
+    const studentData = this.studentForm.value;
     this.http.post('http://localhost:8080/Student/saveStudent', studentData)
     .subscribe( response => {
       console.log('Student saved successfully', response)

@@ -9,6 +9,7 @@ import { TeacherComponent } from './teacher/teacher.component';
 import { AddTeacherComponent } from './add-teacher/add-teacher.component';
 import { SubjectComponent } from './subject/subject.component';
 import { AddSubjectComponent } from './add-subject/add-subject.component';
+import { AttendanceComponent } from './attendance/attendance.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
     path: 'add-subject',
     component: AddSubjectComponent,
   },
+  {
+    path: 'attendance',
+    component: AttendanceComponent,
+  }
 ];
 
 @NgModule({

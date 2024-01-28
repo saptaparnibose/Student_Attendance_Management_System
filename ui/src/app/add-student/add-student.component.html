@@ -3,12 +3,12 @@
     <form [formGroup]="studentForm" (ngSubmit)="saveStudent()">
         <div>
             <label>RollNo </label>
-            <input type="text" formControlName="rollNo" style="padding: 10px; margin: 10px">
+            <input type="number" formControlName="rollNumber" style="padding: 10px; margin: 10px">
         </div>
 
         <div>
             <label>StudentName </label>
-            <input type="text" formControlName="studentName" style="padding: 10px; margin: 10px">
+            <input type="text" formControlName="name" style="padding: 10px; margin: 10px">
         </div>
 
         <div>
@@ -32,4 +32,3 @@
     </form>
 </div>
 <h3> Form status: {{studentForm.valid}}</h3>
-

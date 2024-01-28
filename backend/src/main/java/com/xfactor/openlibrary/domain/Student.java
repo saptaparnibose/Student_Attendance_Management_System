@@ -24,7 +24,7 @@ public class Student {
     @Column
     private int semester;
     @Column
-    private String branchId;
+    private int branchId;
     //@ManyToOne
     //@JoinColumn(name = "branchId",insertable=false, updatable=false)
     //private Branch branch;
@@ -60,11 +60,11 @@ public class Student {
     public void setSemester(int semester) {
         this.semester = semester;
     }
-    public String getbranchId() {
+    public int getbranchId() {
         return branchId;
     }
 
-    public void setbranchId(String branchId) {
+    public void setbranchId(int branchId) {
         this.branchId = branchId;
     }
 }
