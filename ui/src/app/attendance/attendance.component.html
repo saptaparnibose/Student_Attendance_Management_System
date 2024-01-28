@@ -1,1 +1,57 @@
-<p>attendance works!</p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Text Center</title>
+        <style type="text/css">
+            body{
+                padding: 0;
+                margin: 0;
+                background: #1a1502;
+            }
+            h1{
+                font-size: 2em;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-family: 'Times New Roman';
+                position: absolute;
+                top: 26%;
+                left: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Attendance Component</h1>
+    </body>
+</html>
+
+<h2 *ngIf="attendances.length<1">No Data</h2>
+<div style= "padding-left: 50%;margin: 13%; float:right">
+    <button class="button" (click)="addAttendance()"> 
+    Take attendance</button>
+  </div>
+<table>
+    <thead>
+        <tr>
+            <th>StudentId</th>
+            <th>studentName</th>
+            <th>attended</th>
+            <th>total</th>
+            <th>date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let x of attendances">
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.attended}}</td>
+            <td>{{x.total}}</td>
+            <td>{{x.date}}</td>
+            <td>
+                <button (click)="deleteAttendance(x.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

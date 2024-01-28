@@ -16,6 +16,7 @@ import { AddTeacherComponent } from './add-teacher/add-teacher.component';
 import { SubjectComponent } from './subject/subject.component';
 import { AddSubjectComponent } from './add-subject/add-subject.component';
 import { AttendanceComponent } from './attendance/attendance.component';
+import { AddAttendanceComponent } from './add-attendance/add-attendance.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AttendanceComponent } from './attendance/attendance.component';
     SubjectComponent,
     AddSubjectComponent,
     AttendanceComponent,
+    AddAttendanceComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { AddTeacherComponent } from './add-teacher/add-teacher.component';
 import { SubjectComponent } from './subject/subject.component';
 import { AddSubjectComponent } from './add-subject/add-subject.component';
 import { AttendanceComponent } from './attendance/attendance.component';
+import { AddAttendanceComponent } from './add-attendance/add-attendance.component';
 
 const routes: Routes = [
   {
@@ -51,7 +52,11 @@ const routes: Routes = [
   {
     path: 'attendance',
     component: AttendanceComponent,
-  }
+  },
+  {
+    path: 'add-attendance',
+    component: AddAttendanceComponent,
+  },
 ];
 
 @NgModule({
