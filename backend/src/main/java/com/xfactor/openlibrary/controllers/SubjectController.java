@@ -27,7 +27,7 @@ public class SubjectController {
 
     @PostMapping("/saveSubject")
     public Subject saveSubject(@RequestBody Subject subject){
-        if(subject.getsubjectId() == null){
+        if(subject.getSubjectId() == null){
             subjectRepository.save(subject);
             return subject;
         }
@@ -35,14 +35,14 @@ public class SubjectController {
     }
     @PutMapping("/updateSubject")
     public Subject subject(@RequestBody Subject subject){
-        if (subject.getsubjectId() != null) {
+        if (subject.getSubjectId() != null) {
             Subject l = subjectRepository.save(subject);
             return l;
         }
         return null;
     }
 
-    @GetMapping("/getALl")
+    @GetMapping("/getAll")
     public List<Subject> getAllSubject(){
         return subjectRepository.findAll();
     }

@@ -2,22 +2,16 @@
     <h1>Add Attendance</h1>
     <form [formGroup]="attendanceForm" (ngSubmit)="saveAttendance()">
         <div>
+            <label>RollNumber </label>
+            <input type="number" formControlName="rollNo" style="padding: 10px; margin: 10px">
+        </div>
+        <div>
             <label>StudentName </label>
             <input type="text" formControlName="name" style="padding: 10px; margin: 10px">
         </div>
-
         <div>
-            <label>Attended </label>
-            <input type="number" formControlName="attended" style="padding: 10px; margin: 10px">
-        </div>
-
-        <div>
-            <label>Total </label>
-            <input type="number" formControlName="total" style="padding: 10px; margin: 10px">
-        </div>
-        <div>
-            <label>Date </label>
-            <input type="date" formControlName="date" style="padding: 10px; margin: 10px">
+            <label>Department</label>
+            <input type="text" formControlName="dept" style="padding: 10px; margin: 10px">
         </div>
 
         <div *ngIf="attendanceForm.valid">

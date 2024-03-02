@@ -29,29 +29,45 @@
 <h2 *ngIf="attendances.length<1">No Data</h2>
 <div style= "padding-left: 50%;margin: 13%; float:right">
     <button class="button" (click)="addAttendance()"> 
-    Take attendance</button>
+    Add Student</button>
   </div>
 <table>
     <thead>
         <tr>
-            <th>StudentId</th>
-            <th>studentName</th>
-            <th>attended</th>
-            <th>total</th>
-            <th>date</th>
+            <th>Id</th>
+            <th>Roll Number</th>
+            <th>Student Name</th>
+            <th>Department</th>
+            <th>Attendance</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor = "let x of attendances">
             <td>{{x.id}}</td>
+            <td>{{x.rollNo}}</td>
             <td>{{x.name}}</td>
-            <td>{{x.attended}}</td>
-            <td>{{x.total}}</td>
-            <td>{{x.date}}</td>
+            <td>{{x.dept}}</td>
+            <td>
+                <select ng-model="student.attendances">
+                    <option value="p">Present</option>
+                    <option value="a">Absent</option>
+                </select>
+            </td>
             <td>
                 <button (click)="deleteAttendance(x.id)">Delete</button>
             </td>
         </tr>
     </tbody>
 </table>
+<div>
+    <h4>Total Count: </h4>
+</div>
+<div>
+    <h4>Present:</h4>
+    <h4>Absent: </h4>
+</div>
+<!--<div>
+    <script src = "attendance.component.ts"></script>
+</div>-->
 

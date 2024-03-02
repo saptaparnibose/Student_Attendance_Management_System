@@ -23,7 +23,7 @@ export class AttendanceComponent implements OnInit {
     this.router.navigateByUrl('/add-attendance')
   }
   fetchAllAttendance(){
-    this.http.get("http://localhost:8080/attendance/getALl")
+    this.http.get("http://localhost:8080/attendance/getAll")
     .subscribe( resp =>{
       this.attendances = resp;
       console.log('Attendances retrived successfully:', this.attendances)

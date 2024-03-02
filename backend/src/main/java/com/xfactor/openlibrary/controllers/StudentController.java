@@ -55,11 +55,12 @@ public class StudentController {
         }
         return null;
     }
+    @GetMapping("/findTotal")
+    public long findTotal(){
+        return studentRepository.count();
+    }
     @DeleteMapping("/deleteById/{id}")
     public void deleteById(@PathVariable Long id){
         studentRepository.deleteById(id);
     }
 }
-
-
-

@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-//import javax.persistence.JoinColumn;
-//import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,55 +14,49 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private int rollNo;
+    private String name;
     @Column
-    private String studentName;
+    private String department;
     @Column
-    private int batch;
+    private String rollNumber;
     @Column
-    private int semester;
+    private String birthDate;
     @Column
-    private int branchId;
-    //@ManyToOne
-    //@JoinColumn(name = "branchId",insertable=false, updatable=false)
-    //private Branch branch;
-
+    private String mobileNumber;
     public Long getId() {
         return id;
     }
     public void setId(Long id) {
         this.id = id;
     }
-    public int getRollNumber() {
-        return rollNo;
-    }
-    public void setRollNumber(int rollNo) {
-        this.rollNo = rollNo;
-    }
     public String getName() {
-        return studentName;
+        return name;
     }
-    public void setName(String studentName) {
-        this.studentName = studentName;
+    public void setName(String name) {
+        this.name = name;
     }
-    public int getBatch() {
-        return batch;
+    public String getDepartment() {
+        return department;
     }
-    public void setBatch(int batch) {
-        this.batch = batch;
+    public void setDepartment(String department) {
+        this.department = department;
     }
-    
-    public int getSemester() {
-        return semester;
+    public String getRollNumber() {
+        return rollNumber;
     }
-    public void setSemester(int semester) {
-        this.semester = semester;
+    public void setRollNumber(String rollNumber) {
+        this.rollNumber = rollNumber;
     }
-    public int getbranchId() {
-        return branchId;
+    public String getBirthDate() {
+        return birthDate;
     }
-
-    public void setbranchId(int branchId) {
-        this.branchId = branchId;
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+    }
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
     }
 }

@@ -37,6 +37,7 @@
             <th>Id</th>
             <th>SubjectCode</th>
             <th>SubjectName</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -45,7 +46,7 @@
             <td>{{x.subjectCode}}</td>
             <td>{{x.subjectName}}</td>
             <td>
-                <button (click)="deleteSubject(x.id)">Delete</button>
+                <button (click)="deleteSubject(x.subjectId)">Delete</button>
             </td>
         </tr>
     </tbody>

@@ -14,10 +14,9 @@ export class AddAttendanceComponent implements OnInit {
 
   constructor(private formbuilder: FormBuilder, private http: HttpClient, private router: Router) { 
     this.attendanceForm = this.formbuilder.group({
-      name: ['', Validators.required],
-      attended: [, Validators.required],
-      total: [, Validators.required],
-      date: [, Validators.required]
+      rollNo: [],
+      name: [''],
+      dept: ['']
     })
   }
 

@@ -1,7 +1,5 @@
 package com.xfactor.openlibrary.domain;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,44 +12,38 @@ import javax.persistence.Table;
 public class Attendance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long studentId;
+    private Long id;
     @Column
-    private String studentName;
+    private int rollNo;
     @Column
-    private int attended;
-    @Column
-    private int total;
-    @Column
-    private Date date;
+    private String name;
+    @Column 
+    private String dept;
+    
     public Long getId() {
-        return studentId;
+        return id;
     }
     public void setId(Long id) {
-        this.studentId = id;
+        this.id = id;
+    }
+    public int getRollNo() {
+        return rollNo;
+    }
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
     }
     public String getName() {
-        return studentName;
+        return name;
     }
-    public void setName(String studentName) {
-        this.studentName = studentName;
+    public void setName(String name) {
+        this.name = name;
     }
-    public int getAttended() {
-        return attended;
+    public String getDept() {
+        return dept;
     }
-    public void setAttended(int attended) {
-        this.attended = attended;
-    }
-    public int getTotal() {
-        return total;
-    }
-    public void setTotal(int total) {
-        this.total = total;
-    }
-    public Date getDate() {
-        return date;
-    }
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDept(String dept) {
+        this.dept = dept;
     }
     
+
 }

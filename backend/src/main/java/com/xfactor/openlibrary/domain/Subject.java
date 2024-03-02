@@ -18,24 +18,25 @@ public class Subject {
     private String subjectCode;
     @Column
     private String subjectName;
-    
-    public Long getsubjectId() {
+    public Long getSubjectId() {
         return subjectId;
     }
-    public void setsubjectId(Long subjectId) {
+    public void setSubjectId(Long subjectId) {
         this.subjectId = subjectId;
     }
-    public String getsubjectCode() {
+    public String getSubjectCode() {
         return subjectCode;
     }
-    public void setsubjectCode(String subjectCode) {
+    public void setSubjectCode(String subjectCode) {
         this.subjectCode = subjectCode;
     }
-    public String getsubjectName() {
+    public String getSubjectName() {
         return subjectName;
     }
-    public void setStudentId(String subjectName) {
+    public void setSubjectName(String subjectName) {
         this.subjectName = subjectName;
     }
+    
+    
     
 }

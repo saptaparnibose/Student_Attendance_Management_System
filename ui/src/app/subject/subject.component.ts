@@ -22,18 +22,18 @@ export class SubjectComponent implements OnInit {
     this.router.navigateByUrl('/add-subject')
   }
   fetchAllSubject(){
-    this.http.get("http://localhost:8080/subject/getALl")
+    this.http.get("http://localhost:8080/subject/getAll")
     .subscribe( resp =>{
       this.subjects = resp;
-      console.log('Admins retrived successfully:', this.subjects)
+      console.log('Subjects retrived successfully:', this.subjects)
     }, error => {
-      console.error('Error while retriving admins:', error);
+      console.error('Error while retriving subjects:', error);
     }
 
     );
   }
-  deleteSubject(subjectId: number){
-    const url = 'http://localhost:8080/admin/deleteById/' + subjectId
+  deleteSubject(subId: number){
+    const url = 'http://localhost:8080/subject/deleteById/' + subId
     console.log(url)
     this.http.delete(url)
     .subscribe( resp => {

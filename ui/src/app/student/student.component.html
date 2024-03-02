@@ -35,21 +35,22 @@
     <thead>
         <tr>
             <th>Id</th>
+            <th>Name</th>
+            <th>Department</th>
             <th>RollNumber</th>
-            <th>StudentName</th>
-            <th>Batch</th>
-            <th>Semester</th>
-            <th>BranchId</th>
+            <th>BirthDate</th>
+            <th>MobileNumber</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor = "let x of students">
             <td>{{x.id}}</td>
-            <td>{{x.rollNumber}}</td>
             <td>{{x.name}}</td>
-            <td>{{x.batch}}</td>
-            <td>{{x.semester}}</td>
-            <td>{{x.branchId}}</td>
+            <td>{{x.department}}</td>
+            <td>{{x.rollNumber}}</td>
+            <td>{{x.birthDate}}</td>
+            <td>{{x.mobileNumber}}</td>
             <td>
                 <button (click)="deleteStudent(x.id)">Delete</button>
             </td>

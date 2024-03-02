@@ -18,7 +18,7 @@ export class StudentComponent implements OnInit {
     this.fetchAllStudent()
   }
   addStudent(){
-    console.log("add student button clicked")
+    console.log("add book button clicked")
     this.router.navigateByUrl('/add-student')
   }
 
